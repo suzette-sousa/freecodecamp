@@ -1,6 +1,10 @@
 # Telephone Number Validator
 FreecodeCamp - JavaScript Algorithms and Data Structures Certification - JavaScript Algorithms and Data Structures Projects
 
+
+---
+
+
 ### What is asked
 
 Return true if the passed string looks like a valid US phone number.
@@ -21,9 +25,14 @@ The area code is required.
 If the country code is provided, you must confirm that the country code is 1.  
 Return true if the string is a valid US phone number; otherwise return false.
 
+
+---
+
+
 ### What I answer
 
-```javascript
+```javascript  
+  
 function telephoneCheck(str) {
   const regex = /^[1]?[' ']?(\([0-9]{3}\)|[0-9]{3})[-]?[' ']?[0-9]{3}[' ',-]?[0-9]{4}$/g;
   const testRegex = regex.test(str);
@@ -31,10 +40,12 @@ function telephoneCheck(str) {
 }
 
 console.log(telephoneCheck("1 (555)555-5555"));
+  
 
 ```
 
 ---
+
 
 ### Tests passed
 
@@ -92,4 +103,3 @@ console.log(telephoneCheck("1 (555)555-5555"));
 
 ✓ telephoneCheck("(555)5(55?)-5555") should return false.
 
----

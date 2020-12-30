@@ -29,7 +29,7 @@ Return true if the string is a valid US phone number; otherwise return false.
 ---
 
 
-### What I answer
+### What I answered
 
 ```javascript  
   

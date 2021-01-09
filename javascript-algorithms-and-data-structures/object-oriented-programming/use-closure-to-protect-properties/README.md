@@ -1,5 +1,5 @@
-# Use Closure
-FreecodeCamp - JavaScript Algorithms and Data Structures Certification - Object Oriented Programming: Use Closure to Protect Properties Within an Object from Being Modified Externally
+# Use an IIFE to Create a Module
+FreecodeCamp - JavaScript Algorithms and Data Structures Certification - Object Oriented Programming: Use an IIFE to Create a Module
 
 
 ---
@@ -7,17 +7,22 @@ FreecodeCamp - JavaScript Algorithms and Data Structures Certification - Object 
 
 ### What is asked
 
-Change how weight is declared in the Bird function so it is a private variable. Then, create a method getWeight that returns the value of weight 15.
+Create a module named funModule to wrap the two mixins isCuteMixin and singMixin. funModule should return an object.
 
 #### Script to complete
 
 ```javascript  
   
-function Bird() {
-  this.weight = 15;
-
-
-}
+let isCuteMixin = function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+};
+let singMixin = function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+};
   
 
 ```
@@ -29,14 +34,20 @@ function Bird() {
 
 ```javascript  
   
-function Bird() {
-  let weight = 15;
-
-  this.getWeight = function() { 
-    return weight;
-  };
-}
-
+let funModule = (function () {
+  return {
+    isCuteMixin: function(obj) {
+      obj.isCute = function() {
+        return true;
+      };
+    },
+    singMixin: function(obj) {
+      obj.sing = function() {
+        console.log("Singing to an awesome tune");
+      };
+    }
+  }
+})();
   
 
 ```
@@ -46,8 +57,8 @@ function Bird() {
 
 ### Tests passed
 
-✓ The weight property should be a private variable and should be assigned the value of 15.
+✓ funModule should be defined and return an object.
 
-✓ Your code should create a method in Bird called getWeight that returns the value of the private variable weight.
+✓ funModule.isCuteMixin should access a function.
 
-✓ Your getWeight function should return the private variable weight.
+✓ funModule.singMixin should access a function.

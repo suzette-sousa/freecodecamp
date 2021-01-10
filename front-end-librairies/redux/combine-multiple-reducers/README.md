@@ -1,5 +1,5 @@
-# Use const for Action Types
-FreecodeCamp - Front End Libraries Certification - Redux: Use const for Action Types
+# Combine Multiple Reducers
+FreecodeCamp - Front End Libraries Certification - Redux: Combine Multiple Reducers
 
 
 ---

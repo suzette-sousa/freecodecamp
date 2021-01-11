@@ -38,7 +38,7 @@ function diffArray(arr1, arr2) {
   var newArr = [];
   let diffArr1 = arr1.filter(diff => !arr2.includes(x));
   let diffArr2 = arr2.filter(diff => !arr1.includes(x));
-  newArr = diffArr1.concat(diffArr2)
+  newArr = diffArr1.concat(diffArr2);
   return newArr;
 }
 

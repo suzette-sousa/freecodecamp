@@ -33,11 +33,11 @@ checkPositive([1, 2, 3, -4, 5]);
   
 function checkPositive(arr) {
   // Only change code below this line
-  let checkArr = arr.every((arrVal) => arrVal > 0);
+  let checkArr = arr.some((arrVal) => arrVal > 0);
   return checkArr;
-  // Only change coden   above this line
+  // Only change code above this line
 }
-console.log(checkPositive([1, 2, 3, 4, 5]));
+checkPositive([1, 2, 3, -4, 5]);
   
 
 ```
